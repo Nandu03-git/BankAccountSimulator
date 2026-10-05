@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bank Account Simulator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7f8;
+            color: #24343b;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 230px;
+            background: #244b55;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 45px;
+        }
+
+        .menu a {
+            display: block;
+            color: #dce9eb;
+            text-decoration: none;
+            padding: 13px 15px;
+            margin-bottom: 8px;
+            border-radius: 10px;
+        }
+
+        .menu a:hover,
+        .menu .active {
+            background: #376872;
+            color: white;
+        }
+
+        /* Main */
+        .main {
+            flex: 1;
+            padding: 35px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .top h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .profile {
+            background: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Welcome */
+        .welcome {
+            background: #dcefed;
+            padding: 28px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+        }
+
+        .welcome h2 {
+            margin-bottom: 8px;
+        }
+
+        .welcome p {
+            color: #5c7075;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+        }
+
+        .card p {
+            color: #718287;
+            margin-bottom: 12px;
+        }
+
+        .card h2 {
+            font-size: 25px;
+        }
+
+        /* Quick actions */
+        .section-title {
+            margin-bottom: 15px;
+        }
+
+        .actions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .action {
+            background: white;
+            padding: 22px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: #24343b;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+        }
+
+        .action:hover {
+            transform: translateY(-2px);
+        }
+
+        .action h3 {
+            margin-bottom: 7px;
+        }
+
+        .action p {
+            color: #7a898d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            .sidebar {
+                width: 190px;
+            }
+
+            .cards,
+            .actions {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            🏦 MyBank
+        </div>
+
+        <nav class="menu">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">My Account</a>
+            <a href="#">Deposit</a>
+            <a href="#">Withdraw</a>
+            <a href="#">Transactions</a>
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <div class="top">
+
+            <div>
+                <h1>Good Morning 👋</h1>
+                <p>Welcome back to your account.</p>
+            </div>
+
+            <div class="profile">
+                User
+            </div>
+
+        </div>
+
+
+        <!-- Welcome -->
+        <section class="welcome">
+
+            <h2>Your finances, made simple.</h2>
+
+            <p>
+                Manage your account, view transactions,
+                and keep track of your balance easily.
+            </p>
+
+        </section>
+
+
+        <!-- Summary Cards -->
+        <section class="cards">
+
+            <div class="card">
+                <p>Available Balance</p>
+                <h2>₹25,450</h2>
+            </div>
+
+            <div class="card">
+                <p>Account Number</p>
+                <h2>XXXX 4582</h2>
+            </div>
+
+            <div class="card">
+                <p>Recent Transactions</p>
+                <h2>12</h2>
+            </div>
+
+        </section>
+
+
+        <!-- Quick Actions -->
+        <h2 class="section-title">Quick Actions</h2>
+
+        <section class="actions">
+
+            <a href="#" class="action">
+                <h3>💰 Deposit</h3>
+                <p>Add money to your account.</p>
+            </a>
+
+            <a href="#" class="action">
+                <h3>💸 Withdraw</h3>
+                <p>Withdraw money from your account.</p>
+            </a>
+
+            <a href="#" class="action">
+                <h3>📄 Transactions</h3>
+                <p>View your recent transactions.</p>
+            </a>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
